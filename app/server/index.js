@@ -41,11 +41,10 @@
   app.use(express.json())
  
 
-  var url = '127.0.0.1:27017/TheNeighborhood';
+  var url = 'mongodb://127.0.0.1:27017/TheNeighborhood';
  
   // if OPENSHIFT env variables are present, use the available connection info:
   if (process.env.MONGODB_URL) {
-      console.log(process.env.MONGODB_URL)
       url = process.env.MONGODB_URL
   }
    
@@ -55,13 +54,13 @@
   };
   connect();
    
-  var db = mongoose.connection;
+  //var db = mongoose.connection;
    
-  db.on('error', function(error){
-      console.log("Error loading the db - "+ error);
-  });
+ // db.on('error', function(error){
+  //    console.log("Error loading the db - "+ error);
+  //});
    
-  db.on('disconnected', connect);
+  //db.on('disconnected', connect);
 
  app.use("/api/register", registerRouter);
  app.use('/api/login', loginRouter);
