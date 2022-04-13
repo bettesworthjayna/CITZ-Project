@@ -22,14 +22,14 @@
 import React, { useEffect, useState } from 'react'
 import jwt_decode from "jwt-decode";
 import { Link, useNavigate } from 'react-router-dom';
-import Posts from '../components/PostsList';
+import Posts from '../Components/PostsList';
 import Grid from '@mui/material/Grid';
 import Paper from '@mui/material/Paper';
 import Box from '@mui/material/Box';
 
-import Communities from '../components/joinCommunitiesList'
+import Communities from '../Components/joinCommunitiesList'
 
- import PostModal from '../components/modals/addPost'
+ import PostModal from '../Components/modals/addPost'
 import Typography from '@mui/material/Typography'
 
 const Home = () => {

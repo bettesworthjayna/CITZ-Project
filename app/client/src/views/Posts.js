@@ -21,9 +21,9 @@
  */
 
  import React, { Component, useState } from 'react';
- import Posts from '../components/PostsList';
+ import Posts from '../Components/PostsList';
  import {Link} from 'react-router-dom';
- import PostModal from '../components/modals/addPost'
+ import PostModal from '../Components/modals/addPost'
 
  const PostsPage = () => {
 
