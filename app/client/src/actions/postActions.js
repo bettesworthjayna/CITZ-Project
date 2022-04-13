@@ -22,7 +22,7 @@
 
  import { GET_POSTS, ADD_POST } from "./types";
 
- API_ROUTE = process.env.API_ROUTE
+ const API_ROUTE = process.env.API_ROUTE
  export const getPosts = () => dispatch => {
          fetch(API_ROUTE+'/post')
              .then(res => res.json())

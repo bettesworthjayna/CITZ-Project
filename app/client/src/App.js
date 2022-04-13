@@ -24,7 +24,7 @@
 import './App.css';
 
 
-const api_route = process.env.API_ROUTE;
+const API_ROUTE = process.env.API_ROUTE;
 import React, { Component, useState, useEffect } from 'react';
 import Routes from './routes.js';
 import Container from '@mui/material/Container';
