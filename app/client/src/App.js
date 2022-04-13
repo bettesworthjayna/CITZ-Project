@@ -30,7 +30,7 @@ import Routes from './routes';
 import Container from '@mui/material/Container';
 
 import { Provider } from 'react-redux';
-import store from './store';
+import store from './store.js';
 
 import Footer from './layout/footer'
 import Header from './layout/header';
