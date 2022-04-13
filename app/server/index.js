@@ -44,9 +44,9 @@
   var url = 'mongodb://userMQG:s2SdgYOaaLRCfsjb@mongodb:27017/TheNeighborhood';
  
   // if OPENSHIFT env variables are present, use the available connection info:
-  if (process.env.MONGODB_URL) {
-      url = process.env.MONGODB_URL
-  }
+  //if (process.env.MONGODB_URL) {
+  //    url = process.env.MONGODB_URL
+  //}
    
   // Connect to mongodb
   var connect = function () {
