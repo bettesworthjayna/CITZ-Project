@@ -32,8 +32,8 @@ import Container from '@mui/material/Container';
 import { Provider } from 'react-redux';
 import store from './store.js';
 
-import Footer from './layout/footer'
-import Header from './layout/header';
+import Footer from './layout/footer.js'
+import Header from './layout/header.js';
 
 import Paper from '@mui/material/Paper'
 import { ThemeProvider, createTheme } from '@mui/material/styles';
