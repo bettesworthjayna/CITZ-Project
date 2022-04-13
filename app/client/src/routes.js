@@ -28,7 +28,7 @@
  import Home from './views/home';
  import About from './views/aboutPage';
  import ProfilePage from './views/profilePage';
- import EditProfile from './components/editProfile';
+ import EditProfile from './components/editProfile.js';
  import CreateCommunity from './components/createCommunity';
  import CommunitiesPage from './views/communitiesPage';
  import NewCommunity from './components/newCommunity';
