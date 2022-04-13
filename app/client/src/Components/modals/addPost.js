@@ -27,7 +27,7 @@
  import './addPost.css'
  import Paper from '@mui/material/Paper';
  import ChooseCommunities from '../communityAutoComplete'
- 
+ const API_ROUTE = process.env.API_ROUTE
  const CreatePost = (props) => {
 
     
@@ -51,7 +51,7 @@
 
       async function userInfo() {
 
-        const req = await fetch('http://localhost:5000/api/profile', {
+        const req = await fetch(API_ROUTE+'/profile', {
             headers: {
                 'x-access-token': localStorage.getItem('token'),
             },

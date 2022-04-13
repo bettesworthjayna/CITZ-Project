@@ -22,9 +22,9 @@
 
  import { GET_POSTS, ADD_POST } from "./types";
 
-
+ API_ROUTE = process.env.API_ROUTE
  export const getPosts = () => dispatch => {
-         fetch('http://localhost:5000/api/post')
+         fetch(API_ROUTE+'/post')
              .then(res => res.json())
              .then(posts => dispatch({
                  type: GET_POSTS,
@@ -38,7 +38,7 @@
      
      console.log(postData);
      console.log('hello');
-     fetch('http://localhost:5000/api/post', {
+     fetch(API_ROUTE+'/post', {
          method: 'POST',
          headers: {
            'Content-Type': 'application/json',

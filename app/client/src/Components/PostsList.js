@@ -25,7 +25,7 @@
  import { getPosts } from '../actions/postActions';
  import PropTypes from 'prop-types';
  import Paper from '@mui/material/Paper';
- 
+ const API_ROUTE = process.env.API_ROUTE
  
   class Posts extends Component {
   constructor(props){
@@ -38,7 +38,7 @@
  
      componentDidMount(){
         //  this.props.getPosts();
-        fetch('http://localhost:5000/api/post')
+        fetch(API_ROUTE+'/post')
              .then(res => res.json())
              .then(data => (this.setState({posts: data})));
      }

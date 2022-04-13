@@ -152,6 +152,8 @@ objects:
               env:
                 - name: PORT
                   value: "${PORT}"
+                - name: API_ROUTE
+                  value: "${API_ROUTE}"
 parameters:
   - name: PORT
     required: true
@@ -171,3 +173,6 @@ parameters:
   - name: CLUSTER_DOMAIN
     description: domain name of cluster
     required: true
+  - name: API_ROUTE
+    description: domain name of cluster
+    value: `hwp-server${SUFFIX}.${NAMESPACE}.apps.silver.devops.gov.bc.ca`

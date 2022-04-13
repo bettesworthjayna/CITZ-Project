@@ -21,10 +21,10 @@
  */
 
 import { GET_COMMUNITIES, ADD_COMMUNITY } from "./types";
-
+const API_ROUTE = process.env.API_ROUTE
 
 export const getCommunities = () => dispatch => {
-        fetch('http://localhost:5000/api/Community')
+        fetch(API_ROUTE+'/Community')
             .then(res => res.json())
             .then(communities => dispatch({
                 type: GET_COMMUNITIES,
@@ -38,7 +38,7 @@ export const createCommunity = communityData => dispatch => {
     
     console.log(communityData);
     console.log('hello');
-    fetch('http://localhost:5000/api/Community', {
+    fetch(API_ROUTE+'/Community', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

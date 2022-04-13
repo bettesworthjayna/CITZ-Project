@@ -24,7 +24,7 @@
  import { useNavigate } from 'react-router-dom';
  import { useDispatch } from 'react-redux';
  import { createCommunity } from '../actions/communityActons';
- 
+ const API_ROUTE = process.env.API_ROUTE
  const CreateCommunity = () => {
     const navigate = useNavigate();
     const dispatch = useDispatch();
@@ -63,7 +63,7 @@
 
       async function userInfo() {
 
-        const req = await fetch('http://localhost:5000/api/profile', {
+        const req = await fetch(API_ROUTE+'/profile', {
             headers: {
                 'x-access-token': localStorage.getItem('token'),
             },

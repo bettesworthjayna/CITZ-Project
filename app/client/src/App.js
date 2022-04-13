@@ -24,7 +24,7 @@
 import './App.css';
 
 
-
+const api_route = process.env.API_ROUTE;
 import React, { Component, useState, useEffect } from 'react';
 import Routes from './routes.js';
 import Container from '@mui/material/Container';
@@ -50,7 +50,7 @@ function App(){
   });
 
   async function populateDark() {
-    const req = await fetch('http://localhost:5000/api/editprofile', {
+    const req = await fetch(API_ROUTE+'/editprofile', {
         headers: {
             'x-access-token': localStorage.getItem('token'),
         },

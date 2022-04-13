@@ -30,7 +30,7 @@
  import DarkMode from '@mui/icons-material/DarkMode'
  import Group from '@mui/icons-material/Group'
  //import {logOff} from '../components/logout';
-
+const API_ROUTE = process.env.API_ROUTE
 
  const SideMenu = ({darkMode, setDarkMode}) => {
   async function openSlideMenu(){
@@ -48,7 +48,7 @@
   async function updateDarkMode(event){
     event.preventDefault()
     setDarkMode(!darkMode)
-    const req = await fetch('http://localhost:5000/api/editprofile', {
+    const req = await fetch(API_ROUTE+'/editprofile', {
        method: 'POST',
         headers: {
             'Content-Type': 'application/json',
@@ -62,7 +62,7 @@
   }
   async function logOff(){
    
-    fetch('http://localhost:5000/api/logout', {
+    fetch(API_ROUTE+'/logout', {
       headers: {
           'x-access-token': localStorage.getItem('token'),
       },

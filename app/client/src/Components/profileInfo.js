@@ -22,6 +22,7 @@
  import React, { useEffect, useState } from 'react'
  import jwt_decode from "jwt-decode";
  import { useNavigate } from 'react-router-dom';
+ const API_ROUTE = process.env.API_ROUTE
 
  const Profile = () => {
     const navigate = useNavigate();
@@ -32,7 +33,7 @@
     const [bio, setBio] = useState('')
 
     async function populateQuote() {
-        const req = await fetch('http://localhost:5000/api/profile', {
+        const req = await fetch(API_ROUTE+'/profile', {
             headers: {
                 'x-access-token': localStorage.getItem('token'),
             },

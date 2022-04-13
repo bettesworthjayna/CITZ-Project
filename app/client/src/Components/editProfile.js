@@ -23,6 +23,7 @@
  import jwt_decode from "jwt-decode";
  import { Link, useNavigate } from 'react-router-dom';
  import '../views/Styles/editprofile.css'
+ const API_ROUTE = process.env.API_ROUTE
 
  const EditProfile = () => {
     const navigate = useNavigate();
@@ -36,7 +37,7 @@
     const [tempBio, setTempBio] = useState('')
 
     async function populateProfile() {
-        const req = await fetch('http://localhost:5000/api/editprofile', {
+        const req = await fetch(API_ROUTE+'/editprofile', {
             headers: {
                 'x-access-token': localStorage.getItem('token'),
             },
@@ -68,7 +69,7 @@
 
     async function updateTitle(event){
         event.preventDefault()
-        const req = await fetch('http://localhost:5000/api/editprofile', {
+        const req = await fetch(API_ROUTE+'/editprofile', {
            method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -88,7 +89,7 @@
     } 
     async function updateFullName(event){
         event.preventDefault()
-        const req = await fetch('http://localhost:5000/api/editprofile', {
+        const req = await fetch(API_ROUTE+'/editprofile', {
            method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -108,7 +109,7 @@
     } 
     async function updateBio(event){
         event.preventDefault()
-        const req = await fetch('http://localhost:5000/api/editprofile', {
+        const req = await fetch(API_ROUTE+'/editprofile', {
            method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

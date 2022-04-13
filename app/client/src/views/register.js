@@ -23,6 +23,7 @@
   import '../views/Styles/register.css'
  import {useState} from 'react';
  import {useNavigate, Link} from 'react-router-dom';
+ const API_ROUTE = process.env.API_ROUTE
  
  function App() {
    const navigate = useNavigate();
@@ -36,7 +37,7 @@
      if(password != rePassword){
        alert("Password's do not match, please try again")
      }else{
-     const response = await fetch('http://localhost:5000/api/register', {
+     const response = await fetch(API_ROUTE+'/register', {
      method: 'POST',
      headers: {
        'Content-Type': 'application/json',
