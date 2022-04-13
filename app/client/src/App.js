@@ -26,7 +26,7 @@ import './App.css';
 
 
 import React, { Component, useState, useEffect } from 'react';
-import Routes from './routes';
+import Routes from './routes.js';
 import Container from '@mui/material/Container';
 
 import { Provider } from 'react-redux';
