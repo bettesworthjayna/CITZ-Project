@@ -153,7 +153,7 @@ objects:
                 - name: PORT
                   value: "${PORT}"
                 - name: API_ROUTE
-                  value: "${API_ROUTE}"
+                  value: "http://hwp-server${SUFFIX}.${NAMESPACE}.apps.silver.devops.gov.bc.ca:8080/api"
 parameters:
   - name: PORT
     required: true
@@ -173,6 +173,3 @@ parameters:
   - name: CLUSTER_DOMAIN
     description: domain name of cluster
     required: true
-  - name: API_ROUTE
-    description: domain name of cluster
-    value: `hwp-server${SUFFIX}.${NAMESPACE}.apps.silver.devops.gov.bc.ca`

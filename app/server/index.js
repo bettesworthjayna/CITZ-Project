@@ -41,7 +41,7 @@
   app.use(express.json())
  
 
-  var url = 'mongodb://127.0.0.1:27017/TheNeighborhood';
+  var url = 'mongodb://userMQG:s2SdgYOaaLRCfsjb@mongodb:27017/TheNeighborhood';
  
   // if OPENSHIFT env variables are present, use the available connection info:
   if (process.env.MONGODB_URL) {
