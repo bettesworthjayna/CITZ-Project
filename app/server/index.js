@@ -45,6 +45,7 @@
  
   // if OPENSHIFT env variables are present, use the available connection info:
   if (process.env.MONGODB_URL) {
+      console.log(process.env.MONGODB_URL)
       url = process.env.MONGODB_URL
   }
    
